@@ -1,0 +1,298 @@
+{
+ "n": [
+  43410,
+  5426,
+  5427
+ ],
+ "multilabel_share": 0.16360285648468095,
+ "labels_per_ex": 1.1772172310527529,
+ "emotions": [
+  "admiration",
+  "amusement",
+  "anger",
+  "annoyance",
+  "approval",
+  "caring",
+  "confusion",
+  "curiosity",
+  "desire",
+  "disappointment",
+  "disapproval",
+  "disgust",
+  "embarrassment",
+  "excitement",
+  "fear",
+  "gratitude",
+  "grief",
+  "joy",
+  "love",
+  "nervousness",
+  "optimism",
+  "pride",
+  "realization",
+  "relief",
+  "remorse",
+  "sadness",
+  "surprise",
+  "neutral"
+ ],
+ "train_freq": [
+  4130,
+  2328,
+  1567,
+  2470,
+  2939,
+  1087,
+  1368,
+  2191,
+  641,
+  1269,
+  2022,
+  793,
+  303,
+  853,
+  596,
+  2662,
+  77,
+  1452,
+  2086,
+  164,
+  1581,
+  111,
+  1110,
+  153,
+  545,
+  1326,
+  1060,
+  14219
+ ],
+ "test_freq": [
+  504,
+  264,
+  198,
+  320,
+  351,
+  135,
+  153,
+  284,
+  83,
+  151,
+  267,
+  123,
+  37,
+  103,
+  78,
+  352,
+  6,
+  161,
+  238,
+  23,
+  186,
+  16,
+  145,
+  11,
+  56,
+  156,
+  141,
+  1787
+ ],
+ "mean_tokens": 12.840175074867542,
+ "nfeat": {
+  "word": 58338,
+  "char": 65713
+ },
+ "majority_label": "neutral",
+ "results": {
+  "Majority label": {
+   "test_macro_global": 0.017693770050299023,
+   "test_micro_global": 0.30401497107859815,
+   "test_macro_class": null,
+   "test_micro_class": null,
+   "top1": 0.3292795282845034,
+   "cfg": "-"
+  },
+  "TF-IDF word + NB": {
+   "dev_macro_global": 0.2919450529718919,
+   "test_macro_global": 0.2943367845124311,
+   "test_micro_global": 0.4599474442654912,
+   "test_macro_class": 0.26596424225907855,
+   "test_micro_class": 0.38549075391180654,
+   "top1": 0.49677538234752167,
+   "cfg": "w,C=0.3,cw=None"
+  },
+  "TF-IDF word + SVM": {
+   "dev_macro_global": 0.480668535039401,
+   "test_macro_global": 0.4659118126846952,
+   "test_micro_global": 0.5486006423281117,
+   "test_macro_class": 0.4621445757860337,
+   "test_micro_class": 0.5449702929727515,
+   "top1": 0.5940667035194398,
+   "cfg": "w,C=0.2,cw=None"
+  },
+  "TF-IDF word + SVM (balanced)": {
+   "dev_macro_global": 0.4631377963119497,
+   "test_macro_global": 0.4466525964742229,
+   "test_micro_global": 0.5217391304347826,
+   "test_macro_class": 0.44867955925057335,
+   "test_micro_class": 0.5261360651431574,
+   "top1": 0.5524230698360052,
+   "cfg": "w,C=0.05,cw=balanced"
+  },
+  "TF-IDF word + LR": {
+   "dev_macro_global": 0.45518165785158404,
+   "test_macro_global": 0.43611367551872054,
+   "test_micro_global": 0.5124740740740741,
+   "test_macro_class": 0.44347655262553404,
+   "test_micro_class": 0.5226518588745175,
+   "top1": 0.5787728026533997,
+   "cfg": "w,C=8,cw=None"
+  },
+  "TF-IDF word + LR (balanced)": {
+   "dev_macro_global": 0.46539063124854035,
+   "test_macro_global": 0.4510088925643472,
+   "test_micro_global": 0.5381454083538818,
+   "test_macro_class": 0.44539325822597603,
+   "test_micro_class": 0.528505701140228,
+   "top1": 0.5671641791044776,
+   "cfg": "w,C=2,cw=balanced"
+  },
+  "TF-IDF char + LR (balanced)": {
+   "dev_macro_global": 0.4731131088580064,
+   "test_macro_global": 0.46246069326898975,
+   "test_micro_global": 0.5187986328267035,
+   "test_macro_class": 0.4531360543181858,
+   "test_micro_class": 0.5278292542654482,
+   "top1": 0.5480007370554634,
+   "cfg": "c,C=2,cw=balanced"
+  },
+  "TF-IDF word+char + LR (balanced)": {
+   "dev_macro_global": 0.49842702343815387,
+   "test_macro_global": 0.4740054343731444,
+   "test_micro_global": 0.5546015966259978,
+   "test_macro_class": 0.4603571776560616,
+   "test_micro_class": 0.5475695347023655,
+   "top1": 0.5857748295559241,
+   "cfg": "b,C=2,cw=balanced"
+  }
+ },
+ "best": "TF-IDF word+char + LR (balanced)",
+ "boot": {
+  "macro": [
+   0.4510486904066505,
+   0.49682335803045297
+  ],
+  "micro": [
+   0.5437704508008988,
+   0.5644257305192756
+  ]
+ },
+ "per_class_f1": [
+  0.6480965645311049,
+  0.7950963222416813,
+  0.4519230769230769,
+  0.31097560975609756,
+  0.30235783633841884,
+  0.2905405405405405,
+  0.3879781420765027,
+  0.5176110260336907,
+  0.4567901234567901,
+  0.2787456445993031,
+  0.3608768971332209,
+  0.48535564853556484,
+  0.44776119402985076,
+  0.3559322033898305,
+  0.6467065868263473,
+  0.9154929577464789,
+  0.2222222222222222,
+  0.5950413223140496,
+  0.7701375245579568,
+  0.3181818181818182,
+  0.5555555555555556,
+  0.48,
+  0.30324909747292417,
+  0.1,
+  0.676056338028169,
+  0.49240121580547114,
+  0.4657534246575342,
+  0.641313269493844
+ ],
+ "spearman_freq_f1": [
+  0.3858784893267652,
+  0.04254999264148394
+ ],
+ "top_confusions": [
+  [
+   116,
+   "neutral",
+   "approval"
+  ],
+  [
+   95,
+   "approval",
+   "neutral"
+  ],
+  [
+   89,
+   "neutral",
+   "disapproval"
+  ],
+  [
+   87,
+   "neutral",
+   "curiosity"
+  ],
+  [
+   70,
+   "neutral",
+   "annoyance"
+  ],
+  [
+   67,
+   "annoyance",
+   "neutral"
+  ]
+ ],
+ "granularity": {
+  "Ekman (6+neutral)": {
+   "k": 7,
+   "direct": 0.5767692971547547,
+   "direct_micro": 0.6386369014751124,
+   "agg": 0.5796999526543829,
+   "agg_micro": 0.6402289452166803
+  },
+  "Sentiment (3+neutral)": {
+   "k": 4,
+   "direct": 0.6223610164383433,
+   "direct_micro": 0.65297670405522,
+   "agg": 0.6258577720841771,
+   "agg_micro": 0.660367722165475
+  },
+  "Fine-grained (27+neutral)": {
+   "k": 28,
+   "direct": 0.4510088925643472,
+   "direct_micro": 0.5381454083538818,
+   "agg": null,
+   "agg_micro": null
+  }
+ },
+ "learning_curve": {
+  "0.1": [
+   0.34085547455498333,
+   0.33725783125555014,
+   0.3274345756291664
+  ],
+  "0.25": [
+   0.39753756779259664,
+   0.38343217032045807,
+   0.39364012921681363
+  ],
+  "0.5": [
+   0.42188362906536414,
+   0.42331149261401435,
+   0.42921934492439057
+  ],
+  "1.0": [
+   0.4510088925643472
+  ]
+ }
+}
